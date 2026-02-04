@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #111;
+      --bg-light: #f3f1ec;
+      --text-dark: #111;
+      --text-light: #fff;
+      --border: #ccc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: white;
+      line-height: 1.5;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ---------- HEADER ---------- */
+
+    header {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      padding: 2rem;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      opacity: 0.8;
+    }
+
+    .hero {
+      margin-top: 3rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 10vw, 7rem);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-meta {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+      opacity: 0.85;
+    }
+
+    /* ---------- IMAGE STRIP ---------- */
+
+    .image-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    /* ---------- MAIN CONTENT ---------- */
+
+    main {
+      background: var(--bg-light);
+      padding: 3rem 2rem;
+    }
+
+    .content-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .about {
+      background: var(--bg-light);
+      padding: 2rem;
+      border: 1px solid var(--border);
+    }
+
+    .about h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .menu {
+      border: 1px solid var(--border);
+      background: white;
+    }
+
+    .menu ul {
+      list-style: none;
+    }
+
+    .menu li {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .menu li:last-child {
+      border-bottom: none;
+    }
+
+    /* ---------- CONTACT ---------- */
+
+    .contact {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      padding: 3rem 2rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .contact h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 400;
+    }
+
+    .contact-details {
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .skills span {
+      border: 1px solid #444;
+      padding: 0.4rem 0.7rem;
+      font-size: 0.75rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+
+    @media (min-width: 768px) {
+      .hero {
+        grid-template-columns: 2fr 1fr;
+        align-items: end;
+      }
+
+      .content-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+
+      .contact {
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      main {
+        padding: 4rem;
+      }
+
+      header {
+        padding: 3rem 4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-top">
+      <span>internship information</span>
+      <span>menu</span>
+    </div>
+
+    <section class="hero">
+      <h1>PORTFOLIO</h1>
+      <div class="hero-meta">
+        <div>
+          <div>/ 02 2026</div>
+          <div>Design Student</div>
+        </div>
+        <p>
+          Creative process is the stuff of inspiration.<br />
+          Go out and do something special.
+        </p>
+      </div>
+    </section>
+  </header>
+
+  <!-- IMAGE STRIP -->
+  <section class="image-strip">
+    <img src="https://picsum.photos/600/800?random=1" alt="">
+    <img src="https://picsum.photos/600/800?random=2" alt="">
+    <img src="https://picsum.photos/600/800?random=3" alt="">
+  </section>
+
+  <!-- MAIN -->
+  <main>
+    <section class="content-grid">
+      <div class="about">
+        <h2>About & Everything</h2>
+        <p>
+          This portfolio offers a glimpse into my practical work,
+          including typography, branding, interface design, and
+          other university projects.
+        </p>
+        <br />
+        <p>
+          I’m currently studying Communication Design, focusing on
+          visually engaging experiences and meaningful ideas.
+        </p>
+      </div>
+
+      <nav class="menu">
+        <ul>
+          <li>Brand Design</li>
+          <li>Typography</li>
+          <li>Board Game</li>
+          <li>Interface Design</li>
+          <li>More Projects</li>
+          <li>Bits & Pieces</li>
+        </ul>
+      </nav>
+    </section>
+  </main>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <div>
+      <h2>Contact & Info<br />2026</h2>
+      <div class="contact-details">
+        <p>E-Mail: hello@email.com</p>
+        <p>Instagram: @designstudio</p>
+        <p>LinkedIn: Your Name</p>
+      </div>
+
+      <div class="skills">
+        <span>InDesign</span>
+        <span>Illustrator</span>
+        <span>Photoshop</span>
+        <span>Figma</span>
+        <span>After Effects</span>
+        <span>Lightroom</span>
+      </div>
+    </div>
+
+    <img src="https://picsum.photos/700/900?random=4" alt="">
+  </section>
+
+</body>
+</html>

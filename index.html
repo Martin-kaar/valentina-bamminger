@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<!--
+/**
+* @license
+* MyFonts Webfont Build ID 222567
+*
+* The fonts listed in this notice are subject to the End User License
+* Agreement(s) entered into by the website owner. All other parties are
+* explicitly restricted from using the Licensed Webfonts(s).
+*
+* You may obtain a valid license from one of MyFonts official sites.
+* http://www.fonts.com
+* http://www.myfonts.com
+* http://www.linotype.com
+*
+*/
+-->
     <title>Valentia Bamminger</title>
 </head>
 <body>
@@ -24,23 +43,99 @@
         </div>
     </section>
     <section class="image-banner">
-        <div class="side"></div>
-        <div class="collage"></div>
-        <div class="front"></div>
+        <img src="assets/home/left.png" alt="side">
+        <img src="assets/home/mid.png" alt="collage">
+        <img src="assets/home/right.png" alt="front">
     </section>
     <section class="content">
         <div class="about">
+            <div class="overview">
+                <a href="">Overview</a>
+            </div>
             <div class="about-content">
                 <h2>AB<span>O</span>UT & EVERYTHING</h2>
                 <p>This portfolio offers a glimpse into my practical work, including typography, branding, interface design, a board game, and university projects. <br><br>
                     It’s a mix of explorations and finished pieces that show how I approach design across different contexts, from digital and print to interactive experiences.</p>
             </div>
         </div>
-        <div class="image"></div>
+        <script>
+            const mainSides = ['BRAND DESIGN', 'TYPOGRAPHY', 'BOARD GAME', 'INTERFACE DESIGN', 'MORE PROJECTS', 'BITS & PIECES'];
+            const subSides = [['FAELCON', 'KADERSCHMIEDE', 'LUKAS W.'], '', '', '',['ALBUM COVERS', 'VISUAL IDENTITY', 'PHOTOGRAPHY'], ''];
+
+            function checkSubPages(index) {
+                const navItems = document.querySelectorAll('.nav-item');
+                if (index === 0 || index === 4) {
+                    console.log(navItems);
+                    navItems.forEach(el => {
+                        console.log('test');
+                        el.classList.add('nav-hidden');
+                    });
+                } else {
+                    if (index === 1) {
+                        window.location.href = 'pages/typography.html';
+                    } else if (index === 2) {
+                        window.location.href = 'pages/boardgame.html';
+                    } else if (index === 3) {
+                        window.location.href = 'pages/interface.html';
+                    } else if (index === 5) {
+                        window.location.href = 'pages/bitsandpieces.html';
+                    }
+                }
+            }
+        </script>
+        <div class="img-and-nav">
+            <div class="image"><img src="assets/home/content.png" alt="portrait"></div>
+            <nav class="stack-nav">
+                <button class="nav-item" data-index="1" onclick="checkSubPages(0)">Brand Design</button>
+                <button class="nav-item" data-index="2" onclick="checkSubPages(1)">Typography</button>
+                <button class="nav-item" data-index="3" onclick="checkSubPages(2)">Board Game</button>
+                <button class="nav-item" data-index="4" onclick="checkSubPages(3)">Interface Design</button>
+                <button class="nav-item" data-index="5" onclick="checkSubPages(4)">More Projects</button>
+                <button class="nav-item" data-index="6" onclick="checkSubPages(5)">Bits & Pieces</button>
+              </nav>
+        </div>
         <div class="about-text">
             <p>I’m currently studying Communication Design at FH Salzburg, focusing on creating meaningful and visually engaging experiences. I’m passionate about exploring how design can communicate ideas clearly and creatively, and I’m always looking for opportunities to learn and grow. I’m very interested in an internship where I can contribute my skills, gain hands-on experience, and take on real-world design challenges.</p>
         </div>
-        <div class="navigation"></div>
+          </script>
+          
+    </section>
+    <section class="footer">
+        <div class="footer-top">
+            <p>CONTACT SHEET</p>
+            <p class="footer-top-text">Thank you for exploring my work. A collection of projects driven by creativity and careful design thinking.</p>
+            <div class="footer-top-education">
+                <p>FH SALZBURG</p>
+                <a href="@mailto:vbamminger.mma-b2024@fh-salzburg.ac.at">vbamminger.mma-b2024@fh-salzburg.ac.at</a>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <img src="assets/home/Rectangle.png" alt="portrait">
+                <div class="footer-contact-content">
+                    <h1>CONTACT & IN<span>F</span>O</h1>
+                    <p>E-Mail :<br><br>
+                        v.bamminger@icloud.com<br>
+                        vbamminger.mma-b2024@fh-salzburg.ac.at<br>
+                        <br><br>
+                        Instagram : scorpio.design.studio<br><br>
+                        
+                        LinkedIn: Valentina Bamminger
+                        
+                        </p>
+                </div>
+            </div>
+            <p class="footer-year">2026</p>
+            <p class="footer-internship">INTERNSHIP</p>
+        </div>
+        <div class="footer-skills">
+            <span>InDesign</span>
+            <span>Illustrator</span>
+            <span>Photoshop</span>
+            <span>Figma</span>
+            <span>After Effects</span>
+            <span>Lightroom</span>
+        </div>
     </section>
 </body>
 </html>

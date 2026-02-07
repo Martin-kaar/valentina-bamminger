@@ -59,16 +59,43 @@
             </div>
         </div>
         <script>
-            const mainSides = ['BRAND DESIGN', 'TYPOGRAPHY', 'BOARD GAME', 'INTERFACE DESIGN', 'MORE PROJECTS', 'BITS & PIECES'];
             const subSides = [['FAELCON', 'KADERSCHMIEDE', 'LUKAS W.'], '', '', '',['ALBUM COVERS', 'VISUAL IDENTITY', 'PHOTOGRAPHY'], ''];
 
             function checkSubPages(index) {
                 const navItems = document.querySelectorAll('.nav-item');
                 if (index === 0 || index === 4) {
-                    console.log(navItems);
-                    navItems.forEach(el => {
-                        console.log('test');
+                    navItems.forEach((el, index) => {
                         el.classList.add('nav-hidden');
+                    });
+                    const subNav = document.createElement('div');
+                    subNav.classList.add('sub-nav');
+                    subSides[index].forEach((subItem, subIndex) => {
+                        const subButton = document.createElement('button');
+                        subButton.classList.add('nav-item');
+                        subButton.classList.add('sub-nav-item');
+                        subButton.textContent = `(${subIndex+1}) ${subItem}`;
+                        subButton.onclick = function() {
+                            if (index === 0) {
+                                if (subIndex === 0) {
+                                    window.location.href = 'pages/faelcon.html';
+                                } else if (subIndex === 1) {
+                                    window.location.href = 'pages/kaderschmiede.html';
+                                } else if (subIndex === 2) {
+                                    window.location.href = 'pages/lukasw.html';
+                                }
+                            } else if (index === 4) {
+                                if (subIndex === 0) {
+                                    window.location.href = 'pages/albumcovers.html';
+                                } else if (subIndex === 1) {
+                                    window.location.href = 'pages/visualidentity.html';
+                                } else if (subIndex === 2) {
+                                    window.location.href = 'pages/photography.html';
+                                }
+                            }
+                        };
+                        subNav.appendChild(subButton);
+                        const stackNav = document.querySelector('.stack-nav');
+                        stackNav.appendChild(subNav);
                     });
                 } else {
                     if (index === 1) {
@@ -78,10 +105,23 @@
                     } else if (index === 3) {
                         window.location.href = 'pages/interface.html';
                     } else if (index === 5) {
-                        window.location.href = 'pages/bitsandpieces.html';
+                        window.location.href = 'pages/bitsandpieces/bitsandpieces.html';
                     }
                 }
             }
+
+            function resetNavigation() {
+                // reset main nav
+                document.querySelectorAll('.nav-item').forEach(item => {
+                    item.classList.remove('nav-hidden');
+                });
+
+                document.querySelector('.sub-nav')?.remove();
+            }
+
+            document.addEventListener('click', () => {
+                resetNavigation();
+            });
         </script>
         <div class="img-and-nav">
             <div class="image"><img src="assets/home/content.png" alt="portrait"></div>
@@ -94,6 +134,12 @@
                 <button class="nav-item" data-index="6" onclick="checkSubPages(5)">Bits & Pieces</button>
               </nav>
         </div>
+        <script>
+            const stackNav = document.querySelector('.stack-nav');
+            stackNav.addEventListener('click', e => {
+                e.stopPropagation();
+            });
+        </script>
         <div class="about-text">
             <p>I’m currently studying Communication Design at FH Salzburg, focusing on creating meaningful and visually engaging experiences. I’m passionate about exploring how design can communicate ideas clearly and creatively, and I’m always looking for opportunities to learn and grow. I’m very interested in an internship where I can contribute my skills, gain hands-on experience, and take on real-world design challenges.</p>
         </div>

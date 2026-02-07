@@ -106,7 +106,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-left: 80px;
 }
 
@@ -121,7 +121,7 @@ p {
     border: 1px solid black;
     border-radius: 5px;
     margin-top: 90px;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 .about-content {
@@ -142,6 +142,10 @@ p {
 .about-content h2 {
     font-size: 50px;
     font-weight: 500;
+}
+
+.about-content span {
+    font-family: "AstonScriptProRegular", serif;
 }
 
 .image {
@@ -310,6 +314,7 @@ p {
 
 .stack-nav {
     width: 100%;
+    position: relative;
   }
   
   .nav-item {
@@ -329,11 +334,21 @@ p {
     transition: opacity 0.3s ease, filter 0.3s ease;
   }
 
+  .sub-nav {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background: none;
+  }
+
+  .sub-nav-item {
+    background: rgba(255, 255, 255, 0.7) !important;
+  }
+
   .nav-hidden {
-    opacity: 0.4;
-    background: gray;
+    opacity: 0.25;
     pointer-events: none;
-    filter: blur(2px);
+    filter: blur(1px);
   }
   
   /* index number */
@@ -342,17 +357,6 @@ p {
     font-size: 0.9em;
     opacity: 0;
     transition: opacity 0.3s ease;
-  }
-  
-  /* active */
-  .nav-item.active::before {
-    opacity: 1;
-  }
-  
-  /* faded items */
-  .nav-item.faded {
-    opacity: 0.25;
-    filter: blur(1px);
   }
   
   /* hover (desktop only) */

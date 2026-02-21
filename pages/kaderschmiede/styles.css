@@ -215,6 +215,7 @@ body {
 
 .typo-wrapper {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   align-items: end;
   height: 100%;
@@ -366,4 +367,107 @@ body {
     flex-direction: column;
     gap: 1rem;
   }
+}
+.footer {
+    background-color: #1F1F1F;
+    color: #FDFDFD;
+    margin: 0;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 80px 0;
+}
+
+.footer-top-text {
+    max-width: 20vw;
+}
+
+.footer-top-education {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer-top-education a {
+    text-decoration: none;
+    color: #FDFDFD;
+}
+
+.footer-top-education p {
+    text-align: right;
+}
+
+.footer-internship {
+    width: 500px;
+    text-align: left;
+    font-size: 52px;
+    padding-top: 36px;
+    z-index: 10;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-year {
+    font-size: 190px;
+    z-index: 10;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer-contact img {
+    
+}
+
+.footer-contact-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact-content h1 {
+    max-width: 360px;
+}
+
+.footer-skills {
+    display: grid;
+    width: 40%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    margin-top: 90px;
+    padding-bottom: 100px;
+    position: relative;
+    left: 15%
+}
+
+.footer-skills span {
+    border-radius: 5px;
+    border: 1px solid #FFF;
+    text-align: center;
+    padding: 12px 9px;
+    z-index: 10;
+}
+
+.footer-portrait {
+    object-fit: contain;
+    position: absolute;
+    right: 0;
+    margin-top: 150px;
+    max-width: 800px;
+    z-index: 5;
 }

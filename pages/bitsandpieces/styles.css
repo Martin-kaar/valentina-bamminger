@@ -13,14 +13,21 @@
     background: #fff;
   }
 
-  .back-btn {
-    background: none;
-    border: 1px solid #000;
-    padding: 0.4rem 0.8rem;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
+ .back {
+  margin-left: 24px;
+  margin-right: 24px;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #000;
+  grid-area: 1 / 1 / 2 / 2;
+  width: fit-content;
+}
+
+.back a {
+ text-decoration: none;
+  color: #1F1F1F;
+  font-size: 25px;
+}
   /* Grid layout */
   .grid {
     display: grid;

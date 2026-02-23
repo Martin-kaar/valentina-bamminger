@@ -4,6 +4,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+    font-family: "AstonScriptProRegular";
+    src: url('../../assets/fonts/AstonScriptPro.woff2') format('woff2'), url('../../assets/fonts/AstonScriptPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
 img {
   width: 100%;
@@ -45,6 +52,16 @@ body {
   font-size: 25px;
 }
 
+.back:hover {
+  background-color: #1F1F1F;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back:hover a {
+  color: white;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -64,6 +81,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  line-height: 5rem;
 }
 
 .head-content h1 {
@@ -198,7 +216,7 @@ body {
 }
 
 .footer-contact img {
-    
+    width: auto
 }
 
 .footer-contact-content {
@@ -208,6 +226,12 @@ body {
 
 .footer-contact-content h1 {
     max-width: 360px;
+    font-weight: 400;
+    line-height: 2.5rem;
+}
+
+.footer-contact-content span {
+    font-family: "AstonScriptProRegular", serif;
 }
 
 .footer-skills {

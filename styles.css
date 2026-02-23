@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: "AstonScriptProRegular";
-  src: url('assets/fonts/font.woff2') format('woff2'), url('assets/fonts/font.woff') format('woff');
+    src: url('assets/fonts/AstonScriptPro.woff2') format('woff2'), url('assets/fonts/AstonScriptPro.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -247,7 +247,7 @@ p {
 }
 
 .footer-contact img {
-    
+    width: auto;
 }
 
 .footer-contact-content {
@@ -257,6 +257,13 @@ p {
 
 .footer-contact-content h1 {
     max-width: 360px;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 5rem;
+}
+
+.footer-contact-content span {
+    font-family: "AstonScriptProRegular", serif;
 }
 
 .footer-skills {

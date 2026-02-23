@@ -365,9 +365,11 @@ p {
 
   .sub-nav {
     position: absolute;
-    display: inline-block;
+    display: block;
     top: 0;
-    background: none;
+    left: 0;
+    width: 100%;
+    background: #fff;
   }
 
   .sub-nav-item {
@@ -383,7 +385,12 @@ p {
   
   /* hover (desktop only) */
   @media (hover: hover) {
-    .nav-item:hover {
+    .stack-nav:not(:has(.sub-nav)):hover .nav-item {
+      opacity: 0.3;
+    }
+
+    .stack-nav:not(:has(.sub-nav)):hover .nav-item:hover {
+      opacity: 1;
       background: #f2f2f2;
     }
   }

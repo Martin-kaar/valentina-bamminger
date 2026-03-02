@@ -36,6 +36,7 @@ p {
 
 .header nav a {
     text-decoration: none;
+    z-index: 10;
     color: white;
     font-size: 24px;
     font-weight: 400;
@@ -201,7 +202,7 @@ p {
 }
 
 .footer-top-text {
-    max-width: 20vw;
+    max-width: 25vw;
 }
 
 .footer-top-education {

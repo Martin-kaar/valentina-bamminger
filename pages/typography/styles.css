@@ -148,7 +148,11 @@ body {
 
 .left p {
   max-width: 300px;
+  min-width: 300px;
   height: fit-content;
+  line-height: 1.1;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .footer {
@@ -166,7 +170,7 @@ body {
 }
 
 .footer-top-text {
-    max-width: 20vw;
+    max-width: 25vw;
 }
 
 .footer-top-education {

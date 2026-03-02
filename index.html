@@ -24,8 +24,14 @@
 */
 -->
     <title>Valentia Bamminger</title>
+    <script>
+        if (window.innerWidth < 1500) {
+            document.documentElement.classList.add('small-screen');
+        }
+    </script>
 </head>
 <body>
+    <div id="main-content">
     <section class="header">
         <nav>
             <a href="#contact">internship information</a>
@@ -184,5 +190,26 @@
             <span>Lightroom</span>
         </div>
     </section>
+    </div><!-- /#main-content -->
+
+    <!-- Screen size warning overlay -->
+    <div id="screen-warning">
+        <div id="screen-warning-box">
+            <div style="display: flex; justify-content: center; align-items: center;"><span style="width: fit-content;">D</span>esign braucht Raum.</div>
+            <p>
+Du hast diese Seite auf einem mobilen Gerät geöffnet, 
+für das volle visuelle Erlebnis wechsle bitte auf einen Desktop.</p>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('resize', function () {
+            if (window.innerWidth < 1500) {
+                document.documentElement.classList.add('small-screen');
+            } else {
+                document.documentElement.classList.remove('small-screen');
+            }
+        });
+    </script>
 </body>
 </html>

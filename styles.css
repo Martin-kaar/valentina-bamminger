@@ -316,6 +316,11 @@ min-width: 340px;
         #screen-warning-box {
             max-width: 480px;
             padding: 2rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
         }
 
         #screen-warning-box p {
